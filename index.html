@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Parfum Elegan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fff;
+      color: #1a1a1a;
+    }
+
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    section {
+      padding: 60px 40px;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #f5f0e1, #fff);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .hero-text button {
+      
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .hero-image img {
+      max-width: 400px;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .products {
+      background-color: #fdfcf9;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background-color: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      margin-top: 15px;
+      font-size: 20px;
+    }
+
+    .product-card p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    .product-card button {
+      margin-top: 10px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Parfum Elegan</h1>
+    <nav>
+      <a onclick="showSection('home')">Home</a>
+      <a onclick="showSection('produk')">Produk</a>
+      <a onclick="showSection('tentang')">Tentang Kami</a>
+      <a onclick="showSection('kontak')">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <section id="home" class="active hero">
+    <div class="hero-text">
+      <h2>Wangi yang Menggoda</h2>
+      <p>Temukan koleksi parfum eksklusif kami yang dirancang untuk memikat dan meninggalkan kesan mendalam.</p>
+      <button onclick="showSection('produk')">Belanja Sekarang</button>
+    </div>
+    <br>
+    <div class="hero-image">
+      <img src="home.png" alt="">
+    </div>
+  </section>
+
+  <!-- PRODUK -->
+  <section id="produk">
+    <h2>Produk Kami</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="myslf.jpg" alt="Parfum 1">
+        <h3>MYSLF Eau de Parfum Yves Saint Laurent</h3>
+        <p>Rp2.720.000</p>
+        <button>Beli</button>
+      </div>
+      <div class="product-card">
+        <img src="marley.jpg" alt="Parfum 2">
+        <h3>Althaïr Parfums de Marly</h3>
+        <p>Rp3.750.000</p>
+        <button>Beli</button>
+      </div>
+      <div class="product-card">
+        <img src="imagination.jpg" alt="Parfum 3">
+        <h3>Imagination Louis Vuitton</h3>
+        <p>Rp5.700.000</p>
+        <button>Beli</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
+  <section id="tentang">
+    <h2>Tentang Kami</h2>
+    <p>Parfum Elegan didirikan dengan misi untuk menghadirkan aroma yang tak terlupakan melalui produk-produk parfum berkualitas tinggi.</p>
+    <p>Kami percaya bahwa setiap orang memiliki identitas unik yang bisa ditonjolkan melalui aroma yang tepat. Tim kami terdiri dari perfumer profesional, desainer kreatif, dan ahli bisnis berpengalaman.</p>
+  </section>
+
+  <!-- KONTAK -->
+  <section id="kontak">
+    <h2>Hubungi Kami</h2>
+    <p>Alamat: Jl. Wangi No.1, Jakarta</p>
+    <p>Email: info@parfumelegan.id</p>
+    <p>Telepon: 0812-3456-7890</p>
+
+    <form>
+      <input type="text" placeholder="Nama Anda" required />
+      <input type="email" placeholder="Email Anda" required />
+      <textarea rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Parfum Elegan. Semua Hak Dilindungi.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('section').forEach((section) => {
+        section.classList.remove('active');
+      });
+      document.getElementById(id).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
